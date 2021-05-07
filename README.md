@@ -16,11 +16,11 @@
 
 ```go
 type UserInfo struct {
-UserID   int
-Email    string
-Age      int
-Blog     string
-FaceBook string
+    UserID   int
+    Email    string
+    Age      int
+    Blog     string
+    FaceBook string
 }
 ```
 사용자 정보는 위와 같은 스트럭처로 정의하였습니다.
