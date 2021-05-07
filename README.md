@@ -29,28 +29,28 @@ FaceBook string
 package main
 
 import (
-"encoding/json"
-"fmt"
+    "encoding/json"
+    "fmt"
 )
 
 type UserInfo struct {
-UserID   int
-Email    string
-Age      int
-Blog     string
-FaceBook string
+    UserID   int
+    Email    string
+    Age      int
+    Blog     string
+    FaceBook string
 }
 
 func main() {
-u := UserInfo{
-UserID:   1001,
-Email:    "foo@example.com",
-Age:      32,
-Blog:     "foo.blog.com",
-FaceBook: "foo.facebook.com",
-}
-byteData, _ := json.Marshal(u)
-fmt.Println(string(byteData))
+    u := UserInfo{
+        UserID:   1001,
+        Email:    "foo@example.com",
+        Age:      32,
+        Blog:     "foo.blog.com",
+        FaceBook: "foo.facebook.com",
+    }
+    byteData, _ := json.Marshal(u)
+    fmt.Println(string(byteData))
 }
 ```
 애플리케이션 요구사항에 따라서 이 스트럭처를 JSON으로 마샬링 하기로 하였습니다.
@@ -58,11 +58,11 @@ fmt.Println(string(byteData))
 ```shell
 $ go run main.go | jsonpp
 {
-"UserID": 1001,
-"Email": "foo@example.com",
-"Age": 32,
-"Blog": "foo.blog.com",
-"FaceBook": "foo.facebook.com"
+  "UserID": 1001,
+  "Email": "foo@example.com",
+  "Age": 32,
+  "Blog": "foo.blog.com",
+  "FaceBook": "foo.facebook.com"
 }
 ```
 위 코드를 작성된 프로그램을 실행 시켜 보겠습니다. [jsonpp](https://jmhodges.github.io/jsonpp/)을 통해서 손 쉽게 볼 수 있습니다.
